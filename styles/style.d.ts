@@ -10,6 +10,7 @@ declare module "styled-components" {
           brightBlue: string;
           silver: string;
           darkGrey: string;
+          meerkat: string;
         };
       }
     }

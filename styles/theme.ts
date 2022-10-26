@@ -10,6 +10,7 @@ export const theme: DefaultTheme = {
       secondary: "#0070f3",
       brightBlue: "#3E64E5",
       silver: "silver",
-      darkGrey: "#31343e"
+      darkGrey: "#31343e",
+      meerkat: "#ff8331"
   },
 };
