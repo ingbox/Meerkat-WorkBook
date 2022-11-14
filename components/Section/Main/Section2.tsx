@@ -34,7 +34,7 @@ const Section2: NextPage = () => {
       return "https://picsum.photos/id/" + (num + i) + "/1440/800"
     }
     else {
-      return "https://picsum.photos/id/" + (num + i) + "/1440/300"
+      return "https://picsum.photos/id/" + (num + i) + "/1440/250"
     }
   }
 
@@ -50,6 +50,7 @@ const Section2: NextPage = () => {
 
   return (
     <Container>
+      <h2>New</h2>
       <CarouselContainer>
         <Carousel {...settings}>
           <Wrap>
@@ -63,6 +64,7 @@ const Section2: NextPage = () => {
           </Wrap>
         </Carousel>
       </CarouselContainer>
+      <h2>Categories</h2>
       <CateContainer>
         {CategoryData?.map((cate) => (
           <Wrapper key = {cate.id}>

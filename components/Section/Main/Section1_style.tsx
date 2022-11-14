@@ -21,7 +21,6 @@ export const Container = styled.div`
 `
 
 export const CTA = styled.div`
-  /* padding: 80px 40px; */
   width: 100%;
   height: 100%;
   position: relative;

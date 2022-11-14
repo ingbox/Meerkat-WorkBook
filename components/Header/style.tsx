@@ -16,7 +16,7 @@ export const Nav = styled.nav`
 
   &.trans {
     background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(1rem);
+    /* backdrop-filter: blur(1rem); */
     transition: all 0.3s ease-in-out;
   }
 `;
@@ -76,7 +76,7 @@ export const NavMenu = styled.div`
 export const HamContainer = styled.div`
   position: absolute;
   top: 25px;
-  right: 110px;
+  right: 50px;
   height: 30px;
   cursor: pointer;
 `
@@ -84,7 +84,7 @@ export const HamContainer = styled.div`
 export const WebContainer = styled.div`
   display: none;
   position: absolute;
-  right: 110px;
+  right: 50px;
   height: 30px;
   cursor: pointer;
 

@@ -5,6 +5,13 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   background: ${(props) => props.theme.colors.darkGrey};
+  padding-top: 15px;
+
+  & h2 {
+    color: ${(props) => props.theme.colors.white};
+    margin-left: 25px;
+  }
+  overflow: hidden;
 `
 
 export const CarouselContainer = styled.div`
@@ -36,8 +43,6 @@ export const Wrap = styled.div`
 
 export const Carousel = styled(Slider)`
   width: 100%;
-  /* height: 50%; */
-  margin-top: 20px;
   perspective: 150px;
 
   .slick-list {
@@ -65,13 +70,12 @@ export const Carousel = styled(Slider)`
 
 export const CateContainer = styled.div`
   display: grid;
-  margin-top: 30px;
-  padding: 30px 25px 26px 25px;
+  padding: 0px 25px 0 25px;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 25px;
   border-radius: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1400px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 `

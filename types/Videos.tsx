@@ -4,3 +4,9 @@ export interface CategoryDataType {
   video: string,
   imageURL: string
 }
+
+export interface NewsDataType {
+  id: number,
+  name: string,
+  imageURL: string
+}
