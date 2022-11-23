@@ -11,6 +11,13 @@ export const theme: DefaultTheme = {
       brightBlue: "#3E64E5",
       silver: "silver",
       darkGrey: "#31343e",
-      meerkat: "#ff8331"
+      meerkat: "#ff8331",
+      header: "#535860",
+      intro: "#d0d5dd",
+      news: "#edf0f4",
+      outro: "#535860",
+      footer: "#191f28",
+      sidebar: "#1A1E27",
+      highlight: "#545861"
   },
 };

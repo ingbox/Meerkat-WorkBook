@@ -1,15 +1,20 @@
-import type { AppProps } from 'next/app'
 import { ThemeProvider } from "styled-components";
-
 import { GlobalStyle } from "../styles/global-style";
 import { theme } from "../styles/theme";
+import AppLayout from '../components/Layout/AppLayout'
 
-function MyApp({ Component, pageProps }: AppProps) {
+type AppProps = {
+  Component: React.ElementType;
+};
+
+function MyApp({ Component }: AppProps) {
   
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <AppLayout>
+        <Component/>
+      </AppLayout>
     </ThemeProvider>
   )
 }
