@@ -26,7 +26,7 @@ export const NewsContainer = styled.div`
 `
 
 export const Wrapper = styled.div`
-
+  position: relative;
   border: 3px solid rgba(249, 249, 249, 0.1);
   background-color: rgba(249, 249, 249, 0.1);
   img {
