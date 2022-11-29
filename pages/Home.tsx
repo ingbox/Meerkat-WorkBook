@@ -6,7 +6,7 @@ import { MeerkatData } from '../data/Data';
 
 
 const Home: NextPage = () => {
-  return (
+  return ( 
     <>
     <MainContainer>
       <InnerContainer>
