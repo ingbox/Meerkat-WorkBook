@@ -12,7 +12,7 @@ const Footer = () => {
       <NavContainer>
         <InnerContainer>
           <Link href={'/Mobility'}>
-            <a target="_blank" rel="noopener noreferrer">
+            <a>
                 <span>모빌리티</span>
             </a>
           </Link>
