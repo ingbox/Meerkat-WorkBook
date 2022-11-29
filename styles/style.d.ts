@@ -11,6 +11,14 @@ declare module "styled-components" {
           silver: string;
           darkGrey: string;
           meerkat: string;
+          header: string;
+          intro: string;
+          news: string;
+          outro: string;
+          footer: string;
+          sidebar: string;
+          highlight: string;
+          circle: string;
         };
       }
     }

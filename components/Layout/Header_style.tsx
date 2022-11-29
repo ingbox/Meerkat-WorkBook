@@ -1,41 +1,40 @@
 import styled from "styled-components";
- 
+
 export const Nav = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
-  background: #090b13;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 36px;
-  overflow: hidden;
+  background: ${(props) => props.theme.colors.header};
+  height: 45px;
+  padding: 0 50px;
   z-index: 999;
+  overflow: hidden;
 
   &.trans {
     background: hsl(0 0% 100% / 0.1);
     /* backdrop-filter: blur(1rem); */
     transition: all 0.3s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
 `;
 
 export const Logo = styled.img`
+  float: left;
   width: 100px;
   cursor: pointer;
 `;
 
 export const NavMenu = styled.div`
-  display: flex;
-  flex: 1;
-  gap: 15px;
-  margin-left: 25px;
-  align-items: center;
+  
+  float: right;
 
   span {
-    font-size: 20px;
-    letter-spacing: 1.42px;
+    font-size: 16px;
+    letter-spacing: 0px;
     position: relative;
     text-decoration: none;
 
@@ -49,15 +48,14 @@ export const NavMenu = styled.div`
         bottom: -6px;
         opacity: 1;
         transform: scaleX(0);
-        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
         transform-origin: left center;
       }
     }
 
     a {
-      display: flex;
-      align-items: center;
-      padding: 0 12px;
+      display: inline-block;
+      padding: 10px 3vw 0 0;
       cursor: pointer;
       color: ${(props) => props.theme.colors.white};
 
@@ -73,10 +71,46 @@ export const NavMenu = styled.div`
   }
 `;
 
+export const NavInner = styled.div`
+
+    display: inline-block;
+    position: relative;
+    border: 2px solid ${(props) => props.theme.colors.white};
+    border-radius: 15px;
+    left: -3px;
+    top: 7px;
+    font-size: 0;
+    overflow: hidden;
+    
+    
+    a {
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    a:hover {
+      color: ${(props) => props.theme.colors.header};
+      background: ${(props) => props.theme.colors.white};
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      left: calc(50% - 0.5px);
+      top: 0;
+      border-right: 2px solid ${(props) => props.theme.colors.white};
+      height: 100%;
+    }
+
+
+`
+
 export const HamContainer = styled.div`
   position: absolute;
-  top: 25px;
-  right: 50px;
+  top: 10px;
+  right: 15px;
   height: 30px;
   cursor: pointer;
 `
@@ -84,7 +118,8 @@ export const HamContainer = styled.div`
 export const WebContainer = styled.div`
   display: none;
   position: absolute;
-  right: 50px;
+  top: 5px;
+  right: 20px;
   height: 30px;
   cursor: pointer;
 
@@ -154,11 +189,11 @@ export const Hambuger = styled.div`
 export const Sidebar = styled.div`
     display: none;
     position: fixed;
-    top: 70px;
+    top: 45px;
     width: 50vw;
     min-width: 300px;
-    height: 100vh;
-    background: ${(props) => props.theme.colors.meerkat};
+    height: calc(100vh - 45px);
+    background: ${(props) => props.theme.colors.sidebar};
     flex-direction: column;
     font-weight: 700;
     transition: all 0.3s ease-in-out;
@@ -197,5 +232,41 @@ export const Sidebar = styled.div`
 @media (max-width: 768px) {
       display: flex;
   }
+
+`
+
+export const SideInner = styled.div`
+  position: absolute;
+  border: 2px solid ${(props) => props.theme.colors.white};
+  border-radius: 15px;
+  font-size: 0;
+  overflow: hidden;
+
+  left: 30px;
+  bottom: 30px;
+
+
+  a {
+    display: inline-block;
+    color: ${(props) => props.theme.colors.white};
+    font-size: 13px;
+    padding: 3px 8px;
+    margin: 0;
+  }
+
+  &:after {
+      position: absolute;
+      content: '';
+      left: calc(50% - 0.5px);
+      top: 0;
+      border-right: 2px solid ${(props) => props.theme.colors.white};
+      height: 100%;
+    }
+
+    
+    a:hover {
+      color: ${(props) => props.theme.colors.header};
+      background: ${(props) => props.theme.colors.white};
+    }
 
 `

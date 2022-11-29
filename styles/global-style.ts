@@ -21,4 +21,16 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Noto Sans KR";
   }
+  h1 {
+    font-size: 42px;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+  h2, h3, h4 {
+    margin: 0;
+  }
+
   `;
