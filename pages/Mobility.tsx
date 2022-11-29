@@ -118,7 +118,7 @@ const Mobility: NextPage = () => {
       </span>
       <TabMenu>
         {menuArr.map((el,index) => (
-              <li className={index === currentTab ? "submenu focused" : "submenu" }
+              <li key = {index} className={index === currentTab ? "submenu focused" : "submenu" }
               onClick={() => selectMenuHandler(index)}>{el.name}</li>
         ))}
       </TabMenu>

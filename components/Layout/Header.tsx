@@ -97,13 +97,13 @@ const Header = () => {
           </Link>
 
           <SideInner>
-          <Link href={'https://blog.naver.com/7meerkat'}>
-            <a target='_blank'>
+          <Link href={'https://blog.naver.com/7meerkat'} >
+            <a target='_blank' rel="noopener noreferrer">
               블로그
             </a>
           </Link>
           <Link href={'https://www.youtube.com/@user-yy5nq4jp4f'}>
-            <a target='_blank'>
+            <a target='_blank' rel="noopener noreferrer">
               유튜브
             </a>
           </Link>

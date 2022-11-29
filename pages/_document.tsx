@@ -40,7 +40,7 @@ class MyDocument extends Document {
         <Head>
         </Head>
         <body>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c8c8661463629979eab3f2bfc94f87f6&libraries=services,clusterer"
+        <Script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c8c8661463629979eab3f2bfc94f87f6&libraries=services,clusterer"
         />
           <Main />
           <NextScript />

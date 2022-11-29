@@ -62,7 +62,7 @@ const RenderContent = (props: propsType) => {
         <QuesContainer>
         {
             faqs.map((faq, index) => (
-             <FAQS faq={faq} index={index} toggleFAQ= {toggleFAQ}></FAQS>
+             <FAQS key = {index} faq={faq} index={index} toggleFAQ= {toggleFAQ}></FAQS>
             ))
           }
         </QuesContainer>
