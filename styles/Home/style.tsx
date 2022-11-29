@@ -27,12 +27,31 @@ export const InnerContainer = styled.div`
     line-height: 50px;
   }
 
+  span {
+
+  }
+
+  span:before {
+    position: absolute;
+    content: '＞';
+    font-size: 15px;
+    font-weight: 700;
+    color: ${(props) => props.theme.colors.header};
+    top: 8px;
+    right: 170px;
+    border-radius: 50%;
+    background: ${(props) => props.theme.colors.white};
+    /* width: 25px;
+    height: 25px; */
+    padding: 5px 5px;
+  }
+
   :after {
   position: absolute;
   left: 420px;
   top: 21px;
   content: '';
-  border: 2px solid ${(props) => props.theme.colors.white};
+  border-bottom: 3px solid ${(props) => props.theme.colors.white};
   width: calc(100% - 600px);
   height: 0px;
   }
@@ -41,8 +60,8 @@ export const InnerContainer = styled.div`
     position: absolute;
     content: '모빌리티';
     color: solid ${(props) => props.theme.colors.white};
-    top: 40px;
-    left: calc(100% - 250px);
+    top: 50px;
+    left: calc(100% - 240px);
     font-weight: 700;
   }
 
@@ -54,16 +73,22 @@ export const InnerContainer = styled.div`
     position: relative;
     transform: none;
     margin-left: 0;
+
     :after {
       top: 150px;
       left: calc(50% - 150px);
       width: 300px;
-      border: 1px solid ${(props) => props.theme.colors.white};
+      border-bottom: 3px solid ${(props) => props.theme.colors.white};
     }
     :before {
       font-size: 15px;
       top: 180px;
       left: calc(50% + 95px)
+    }
+
+    span:before {
+      top: 137px;
+      right: calc(50% - 162px);
     }
   }
 `;
@@ -80,6 +105,7 @@ export const IntroContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: auto;
+
   background: ${(props) => props.theme.colors.intro};
 
   @media (max-width: 768px) {
@@ -90,10 +116,9 @@ export const IntroContainer = styled.div`
 
 export const ContentContainer = styled.div`
   display: grid;
-  padding: 0 200px;
-  gap: 40px;
+  max-width: 1100px;
+  gap: 50px;
   place-items: center;
-  min-width: 1200px;
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
   border-radius: 10px;
@@ -108,7 +133,7 @@ export const Wrapper = styled.div`
   bottom: 40px;
   position: relative;
   background-color: rgba(249, 249, 249, 0.1);
-  width: 250px;
+  width: 215px;
   height: 300px;
   border-radius: 10px;
   cursor: pointer;
@@ -130,6 +155,7 @@ export const NewsContainer = styled.div`
   background: ${(props) => props.theme.colors.news};
   padding-bottom: 50px;
   gap: 50px;
+  overflow-x: hidden;
 
   h2 {
     margin-top: 50px;
@@ -144,7 +170,7 @@ export const NewsContainer = styled.div`
 export const NewsWrapper = styled.div`
   position: relative;
   background-color: rgba(249, 249, 249, 0.1);
-  width: 250px;
+  width: 215px;
   height: 300px;
   border-radius: 10px;
   cursor: pointer;

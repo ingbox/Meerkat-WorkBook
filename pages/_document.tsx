@@ -6,6 +6,7 @@ import Document, {
   DocumentContext,
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import Script from 'next/script';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -36,8 +37,11 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head></Head>
+        <Head>
+        </Head>
         <body>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c8c8661463629979eab3f2bfc94f87f6&libraries=services,clusterer"
+        />
           <Main />
           <NextScript />
         </body>

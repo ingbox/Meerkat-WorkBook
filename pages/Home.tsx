@@ -14,13 +14,14 @@ const Home: NextPage = () => {
           <h1>우리의 자동차 생활이</h1>
           <h1>스마트해 집니다</h1>
         </TextContainer>
+        <span></span>
       </InnerContainer>
     </MainContainer>
     <IntroContainer>
       <ContentContainer>
             {MeerkatData?.map((data) => (
               <Wrapper key = {data.id}>
-                    <Image src= {data.imageURL} alt = {data.name} layout = 'fill' objectFit='cover' width={ 600 } height = { 900 }/>
+                    <Image src= {data.imageURL} alt = {data.name} layout = 'fill' objectFit='cover' width={ 500 } height = { 900 } priority/>
               </Wrapper>
             ))}
       </ContentContainer>
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
       <ContentContainer>
       {MeerkatData?.map((data) => (
               <NewsWrapper key = {data.id}>
-                    <Image src= {data.imageURL} alt = {data.name} layout = 'fill' objectFit='cover' width={ 600 } height = { 900 }/>
+                    <Image src= {data.imageURL} alt = {data.name} layout = 'fill' objectFit='cover' width={ 600 } height = { 900 } priority/>
               </NewsWrapper>
         ))}
         </ContentContainer>

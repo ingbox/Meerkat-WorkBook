@@ -1,4 +1,4 @@
-import { Nav, Logo,  NavMenu, Hambuger, HamContainer, WebContainer, Sidebar } from './Header_style'
+import { Nav, Logo,  NavMenu, Hambuger, HamContainer, WebContainer, Sidebar, NavInner, SideInner } from './Header_style'
 import Link from "next/link";
 import {useState, useEffect} from 'react';
 
@@ -51,6 +51,18 @@ const Header = () => {
               <span>고객센터</span>
             </a>
           </Link>
+          <NavInner>
+          <Link href={'https://blog.naver.com/7meerkat'}>
+          <a target='_blank'>
+            블로그
+          </a>
+          </Link>
+          <Link href={'https://www.youtube.com/@user-yy5nq4jp4f'}>
+          <a target='_blank'>
+            유튜브
+          </a>
+          </Link>
+          </NavInner>
         </NavMenu>
         <Sidebar className= { active ? "active" : "non-active"}>
           <Link href={'/Mobility'}>
@@ -83,6 +95,19 @@ const Header = () => {
               <span>고객센터</span>
             </a>
           </Link>
+
+          <SideInner>
+          <Link href={'https://blog.naver.com/7meerkat'}>
+            <a target='_blank'>
+              블로그
+            </a>
+          </Link>
+          <Link href={'https://www.youtube.com/@user-yy5nq4jp4f'}>
+            <a target='_blank'>
+              유튜브
+            </a>
+          </Link>
+          </SideInner>
         </Sidebar>
       <WebContainer>
         <object className= { active ? "active" : "non-active"} data="images/spider-web.svg" type="image/svg+xml"/>

@@ -1,19 +1,18 @@
 import styled from "styled-components";
+import Slider from "react-slick";
 
 export const MainContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 45px;
+
   width: 100%;
-  height: 70vh;
+  height: auto;
   background: ${(props) => props.theme.colors.silver};
   border: 2px solid ${(props) => props.theme.colors.meerkat};
+  margin: 0 auto;
+  padding: 30px 0 30px 28px;
+  overflow: hidden;
   
   @media (max-width: 768px) {
-    width: 100%;
-    height: 100vh;
-    align-items: center;
+    height: auto;
   }
 `;
 
@@ -68,9 +67,9 @@ export const TabContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 45px;
+  padding: 100px 0;
   width: 100%;
-  height: 40vh;
+  height: auto;
   background: ${(props) => props.theme.colors.header};
   gap: 40px;
 
@@ -120,4 +119,54 @@ export const TabMenu = styled.div`
   }
 `
 
+export const Carousel = styled(Slider)`
+  position: relative;
+  left: 30%;
 
+  .slick-list {
+    overflow: hidden;
+  }
+
+  .slick-slide {
+    margin-right: 14px;
+  }
+
+  @media (max-width: 768px) {
+    position: static;
+  }
+
+`
+
+export const Wrap = styled.div`
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+  img {
+    margin: auto;
+    border-radius: 25px;
+  }
+`
+
+export const MainTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  float: left;
+  margin: 0 0 0 60px;
+
+  p {
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    float: none;
+    margin: 0 0 50px 0;
+  }
+`

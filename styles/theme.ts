@@ -18,6 +18,7 @@ export const theme: DefaultTheme = {
       outro: "#535860",
       footer: "#191f28",
       sidebar: "#1A1E27",
-      highlight: "#545861"
+      highlight: "#545861",
+      circle: "#324352"
   },
 };

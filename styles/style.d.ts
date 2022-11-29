@@ -18,6 +18,7 @@ declare module "styled-components" {
           footer: string;
           sidebar: string;
           highlight: string;
+          circle: string;
         };
       }
     }

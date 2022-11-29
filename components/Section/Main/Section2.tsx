@@ -45,7 +45,9 @@ const Section2: NextPage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    autoplay: true
+    autoplay: true,
+    prevArrow: false,
+    nextArrow: false
   };
 
   return (
