@@ -1,7 +1,10 @@
 import { NextPage } from 'next';
 import React from 'react';
+import Image from 'next/image'
 import { useState } from 'react';
-import { MainContainer, TabContainer, TabMenu, IntroContainer, TextContainer } from '../styles/Mobility/style';
+import { MainContainer, MainTextContainer, TabContainer, TabMenu, IntroContainer, TextContainer, Carousel, Wrap } from '../styles/Mobility/style';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Mobility: NextPage = () => {
 
@@ -13,6 +16,17 @@ const Mobility: NextPage = () => {
     { name: '일터'},
     { name: '놀이터'}
   ]
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    variableWidth: true
+  };
+
 
   const RenderContent = () => {
 
@@ -28,7 +42,22 @@ const Mobility: NextPage = () => {
           </TextContainer>
         </IntroContainer>
         <MainContainer>
-          모빌리티 소개 1
+            <MainTextContainer>
+              <p>인공지능 스마트 주차관제 시스템</p>
+              <span>인공지능이 탑재된 주차관제 시스템을 기반으로</span>
+              <span>이동생활의 편의를 느껴보세요.</span>
+            </MainTextContainer>
+            <Carousel {...settings}>
+              <Wrap>
+                <Image src= 'https://picsum.photos/id/1/250/250' width={ 250 } height = { 250 } priority/>
+              </Wrap>
+              <Wrap>
+                <Image src= 'https://picsum.photos/id/2/250/250' width={ 250 } height = { 250 } priority/>
+              </Wrap>
+              <Wrap>
+                <Image src= 'https://picsum.photos/id/3/250/250' width={ 250 } height = { 250 } priority/>
+              </Wrap>
+            </Carousel>
         </MainContainer>
         <MainContainer>
           모빌리티 소개 2
@@ -76,7 +105,6 @@ const Mobility: NextPage = () => {
       )
     }
   }
-
 
   const selectMenuHandler = (index: number) => {
     clickTab(index);
